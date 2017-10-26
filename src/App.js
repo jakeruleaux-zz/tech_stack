@@ -8,6 +8,7 @@ import {
 import { Provider } from 'react-redux';
 import { createStore } from 'redux';
 import reducers from './reducers';
+import { Header } from './components/common';
 
 
 export default class App extends Component<{}> {
@@ -15,10 +16,8 @@ export default class App extends Component<{}> {
     return (
       <Provider store={createStore(reducers)}>
         <View>
-          <Text>
-            Welcome to React Native!
-          </Text>
-        </View>
+          <Header headerText='Tech Stack' />
+        </View>  
       </Provider>
     );
   }
